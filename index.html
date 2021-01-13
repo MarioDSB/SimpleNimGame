@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link href='css/nim.css' rel='stylesheet' type='text/css'>
+		<meta charset='utf-8'>
+		<script src='js/nim.js' type='text/javascript'></script>
+		<style>
+			body {
+				background-color: #ffc266;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+			}
+		</style>
+		<title>Nim Game</title>
+	</head>
+	<body>
+		<div id='main'>
+			<p class='title'>Have fun playing the <b class='bold_high'>Nim Game</b></p>
+			<div id='game_victory'  class='message'>
+           		<p class='title'> <b class='higher, green'>You've won!</b> Perhaps you could try a higher difficulty</p>
+           		<img class='image_align, big_picture, big_size' src='images/win.jpg' alt='You win!'>
+           		<figcaption>
+           			<input type='button' value='Try again!' onclick='returnToConfig()'>
+           		</figcaption>
+        	</div>
+        	<div id='game_loss'  class='message'>
+           		<p class='title'> <b class='higher, red'>You lose!</b> You want to try again?</p>
+           		<img class='image_align, big_picture' src='images/lose.jpg' alt='You lose!'>
+           		<figcaption>
+           			<input type='button' value='Try again!' onclick='returnToConfig()'>
+           		</figcaption>
+        	</div>
+			<div id='configurations'>
+				<table class='config_table'>
+					<th colspan='3'>Enter your configurations</th>
+					<tr>
+						<td class='config_lineup'>Board size: &nbsp<span id='size_value'></span></td>
+						<td class='config_lineup' colspan='2'>
+							<input type='range' min='4' max='6' value="5" class='slider' id='size_slider'>
+							
+							<script>
+								var input_size = document.getElementById('size_slider');
+								var output_size = document.getElementById('size_value');
+								output_size.innerHTML = input_size.value;
+
+								input_size.oninput = function() {
+									output_size.innerHTML = this.value;
+								}
+							</script>
+						</td>
+					</tr>
+					<tr>
+						<td class='config_lineup'>Difficulty: &nbsp<span id='difficulty_value'></span></td>
+						<td class='config_lineup' colspan='2'>
+							<input type='range' min='0' max='10' value='5' class='slider' id='difficulty_slider'>
+							
+							<script>
+								var input_diff = document.getElementById('difficulty_slider');
+								var output_diff = document.getElementById('difficulty_value');
+								output_diff.innerHTML = input_diff.value;
+
+								input_diff.oninput = function() {
+									output_diff.innerHTML = this.value;
+								}
+							</script>
+						</td>
+					</tr>
+					<tr>
+						<td class='config_lineup'>First player:</td>
+						<td class='config_lineup'>
+							<img class='image_align, small_picture' src='images/human.jpg' alt='human'>
+							<figcaption>
+								<input type='radio' name='first_player' id='human' checked='checked'>Human
+							</figcaption>
+						</td>
+						<td class='config_lineup'>
+							<img class='image_align, small_picture' src='images/pc.jpg' alt='computer'>
+							<figcaption>
+								<input type='radio' name='first_player' id='computer'>Computer
+							</figcaption>
+						</td>
+					</tr>
+					<br>
+					<tr>
+                        <td colspan='3' class='center_button'>
+                        	<input type='button' value='Start game!' onclick='start_game()'>
+                        </td>   
+                    </tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

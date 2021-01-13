@@ -1,0 +1,113 @@
+tr {
+	height: 50px;
+}
+
+#main {
+	background-color: white;
+	margin: 6%;
+	align-items: center;
+	text-align: center;
+	height: 500px;
+	display: block;
+}
+
+#block{
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+    position: absolute;
+}
+
+.title {
+	font-size: 175%;
+}
+
+.higher {
+	font-size: 500%;
+}
+
+.bold_high {
+	font-size: 225%;
+}
+
+.green {
+	color: lightgreen;
+}
+
+.red {
+	color: darkorange;
+}
+
+.message{
+	background-color: white;
+	opacity: 1;
+    width: 50%;
+    height: 50%;
+    display: none;
+    margin: 10% 22.5%;
+    text-align: center;
+}
+
+.config_table {
+	width: 65%;
+    margin:auto;
+    margin-top: 2%;
+}
+
+.config_lineup{
+    width: 16.25%; 
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 75%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.image_align {
+	align: middle;
+}
+
+.small_picture {
+	height: 75px;
+	width: 75px;
+}
+
+.big_picture {
+	height: 150px;
+	width: 175px;
+}
+
+.big_size {
+	width: 250px;
+}
+
+.token {
+	background-color: #060033;
+	border-radius: 50%;
+	width: 100%;
+}
